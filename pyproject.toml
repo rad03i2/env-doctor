@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "env-doctor"
+version = "1.0.0"
+description = "Local CLI for auditing dotenv files and development environment configuration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["dotenv", "environment", "configuration", "cli", "validation"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+env-doctor = "env_doctor.cli:main"
+
+[project.urls]
+Repository = "https://github.com/rad03i2/env-doctor"
+
+[tool.setuptools.packages.find]
+where = ["src"]
